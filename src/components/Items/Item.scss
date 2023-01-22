@@ -1,0 +1,26 @@
+.wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px;
+
+    // width: 300px;
+    .title {
+        font-weight: bold;
+        font-size: 20px;
+        margin: 5px;
+    }
+
+    .desc {
+        margin: 10px;
+    }
+
+    .currency {
+        margin: 5px;
+
+        .price {
+            font-weight: bold;
+        }
+    }
+}
