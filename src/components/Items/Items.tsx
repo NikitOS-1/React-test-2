@@ -1,12 +1,13 @@
 import itemsArray from "./itemsArray";
-import Item from "./Item";
 import { arrItemProps } from "./itemsArray";
+import Item from "./Item";
+import "./Items.scss";
 
 type Props = {};
 
 const Items = (props: Props) => {
   return (
-    <>
+    <div className="main">
       {itemsArray.map(
         ({ title, description, currency, price }: arrItemProps, i) => (
           <Item
@@ -18,7 +19,7 @@ const Items = (props: Props) => {
           />
         )
       )}
-    </>
+    </div>
   );
 };
 
