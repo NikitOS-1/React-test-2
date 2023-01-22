@@ -1,6 +1,6 @@
 import itemsArray from "./itemsArray";
 import { arrItemProps } from "./itemsArray";
-import Item from "./Item";
+import Item from "./Item/Item";
 import "./Items.scss";
 
 type Props = {};

@@ -1,4 +1,4 @@
-import ButtonCurrency from "./components/Buttons/ButtonCurrency";
+import ButtonCurrency from "./components/ButtonCurrency/ButtonCurrency";
 import Item from "./components/Items/Items";
 import Total from "./components/Total/Total";
 import "./App.scss";

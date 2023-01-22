@@ -1,4 +1,3 @@
-import ButtonBuy from "../Buttons/ButtonBuy";
 import "./Item.scss";
 
 type Props = {
@@ -16,7 +15,7 @@ const Item = ({ title, description, currency, price }: Props) => {
       <div className="currency">
         {currency} <span className="price">{price}</span>
       </div>
-      <ButtonBuy />
+      <button>Buy</button>
     </div>
   );
 };
