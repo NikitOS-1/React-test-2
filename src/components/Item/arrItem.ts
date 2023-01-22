@@ -1,13 +1,11 @@
-type arrItem = [
-  {
-    title: string;
-    description: string;
-    currency: string;
-    price: number;
-  }
-];
+export type arrItemProps = {
+  title: string;
+  description: string;
+  currency: string;
+  price: number;
+};
 
-const arrItem = [
+const arrItem: arrItemProps[] = [
   {
     title: "IPhone 12",
     description: "This is IPhone 12",
