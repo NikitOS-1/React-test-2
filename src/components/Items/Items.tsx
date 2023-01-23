@@ -1,15 +1,13 @@
 import itemsArray from "./itemsArray";
-import { arrItemProps } from "./itemsArray";
+import { itemsArrayProps } from "./itemsArray";
 import Item from "./Item/Item";
 import "./Items.scss";
 
-type Props = {};
-
-const Items = (props: Props) => {
+const Items = () => {
   return (
     <div className="main">
       {itemsArray.map(
-        ({ title, description, currency, price }: arrItemProps, i) => (
+        ({ title, description, currency, price }: itemsArrayProps, i) => (
           <Item
             title={title}
             description={description}
