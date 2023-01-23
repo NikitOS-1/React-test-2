@@ -1,5 +1,5 @@
 import ButtonCurrency from "./components/ButtonCurrency/ButtonCurrency";
-import Item from "./components/Items/Items";
+import Items from "./components/Items/Items";
 import Total from "./components/Total/Total";
 import "./App.scss";
 
@@ -9,7 +9,7 @@ function App() {
       <h1>Test-2</h1>
       <h2>Our shop page</h2>
       <ButtonCurrency />
-      <Item />
+      <Items />
       <Total />
     </div>
   );

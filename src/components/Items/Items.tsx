@@ -9,11 +9,11 @@ const Items = () => {
       {itemsArray.map(
         ({ title, description, currency, price }: itemsArrayProps, i) => (
           <Item
+            key={i}
             title={title}
             description={description}
             currency={currency}
             price={price}
-            key={i}
           />
         )
       )}
