@@ -1,11 +1,18 @@
-import itemsArray from "./itemsArray";
-import { itemsArrayProps } from "./itemsArray";
+import { useState } from "react";
 import Item from "./Item/Item";
 import "./Items.scss";
+import itemsArray, { itemsArrayProps } from "./itemsArray";
 
 const Items = () => {
+  const [price, setPrice] = useState<number>(1);
+
+  const change = () => {
+    setPrice(price * 40);
+  };
   return (
     <div className="main">
+      {price}
+      <button onClick={change}>change</button>
       {itemsArray.map(
         ({ title, description, currency, price }: itemsArrayProps, i) => (
           <Item
