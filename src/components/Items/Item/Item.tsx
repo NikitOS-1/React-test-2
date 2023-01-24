@@ -12,16 +12,7 @@ type Props = {
   };
 };
 
-const Item = ({
-  id,
-  title,
-  description,
-  currency,
-  price,
-  stateCurrency,
-}: Props) => {
-  console.log(stateCurrency);
-
+const Item = ({ title, description, price, stateCurrency }: Props) => {
   let updatePrice = Math.floor(price / stateCurrency.convert);
   return (
     <div className="wrap">
