@@ -6,11 +6,6 @@ import { useState } from "react";
 import { getItemsObject, itemsArrayProps } from "./State/itemsArray";
 import itemsArray from "./State/itemsArray";
 
-type CurrentCurrency = {
-  price: number;
-  currency: string;
-};
-
 function App() {
   return (
     <div className="app">
