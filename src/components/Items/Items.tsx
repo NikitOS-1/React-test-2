@@ -1,27 +1,21 @@
-import { useState } from "react";
 import Item from "./Item/Item";
 import "./Items.scss";
-import itemsArray from "./itemsArray";
-
-type ItemsProps = {
-  id: number;
-  title: string;
-  description: string;
-  currency: string;
-  price: number;
-};
+import ButtonCurrency from "../ButtonCurrency/ButtonCurrency";
+import { useState } from "react";
+import { getItemsObject, itemsArrayProps } from "../../State/itemsArray";
 
 type Props = {
-  addProductInCart: (id: number, count: number) => void;
+  itemsArray: any[];
 };
 
-const Items = ({ addProductInCart }: Props) => {
-  const [items, setItems] = useState<ItemsProps[]>(itemsArray);
+const Items = ({ itemsArray }: Props) => {
+  let obj = getItemsObject(itemsArray);
 
   return (
     <div className="main">
-      {items.map(
-        ({ id, title, description, currency, price }: ItemsProps, i) => (
+      <ButtonCurrency />
+      {itemsArray.map(
+        ({ id, title, description, currency, price }: itemsArrayProps, i) => (
           <Item
             key={i}
             id={id}
@@ -29,7 +23,6 @@ const Items = ({ addProductInCart }: Props) => {
             description={description}
             currency={currency}
             price={price}
-            addProductInCart={addProductInCart}
           />
         )
       )}

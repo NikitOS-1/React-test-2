@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ButtonCurrency from "../../ButtonCurrency/ButtonCurrency";
 import "./Item.scss";
 
 type Props = {
@@ -7,19 +8,8 @@ type Props = {
   description: string;
   currency: string;
   price: number;
-  addProductInCart: (id: number, count: number) => void;
 };
-
-const Item = ({
-  id,
-  title,
-  description,
-  currency,
-  price,
-  addProductInCart,
-}: Props) => {
-  const [count, setCount] = useState<number>(1);
-
+const Item = ({ id, title, description, currency, price }: Props) => {
   return (
     <div className="wrap">
       <div className="title">{title}</div>
@@ -27,7 +17,7 @@ const Item = ({
       <div className="currency">
         {currency} <span className="price">{price}</span>
       </div>
-      <button onClick={() => addProductInCart(id, count)}>Buy</button>
+      <button>Buy</button>
     </div>
   );
 };

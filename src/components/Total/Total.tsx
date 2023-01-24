@@ -1,28 +1,18 @@
-import { getItemsObject, itemsArrayProps } from "../Items/itemsArray";
-import itemsArray from "../Items/itemsArray";
+import { getItemsObject, itemsArrayProps } from "../../State/itemsArray";
+import itemsArray from "../../State/itemsArray";
 import "./Total.scss";
 
-type Props = {
-  productsInCart: {
-    [id: number]: number;
-  };
-  productsObject?: {
-    [id: number]: itemsArrayProps;
-  };
-};
+type Props = {};
 
-const Total = ({
-  productsInCart,
-  productsObject = getItemsObject(itemsArray),
-}: Props) => {
+const Total = (props: Props) => {
   return (
     <div className="total">
       Total :{" "}
-      {Object.keys(productsInCart).reduce(
+      {/* {Object.keys(productsInCart).reduce(
         (total, productId) =>
           total + productsInCart[+productId] * productsObject[+productId].price,
         0
-      )}{" "}
+      )}{" "} */}
     </div>
   );
 };
