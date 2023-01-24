@@ -8,9 +8,10 @@ type Props = {
     convert: number;
     currency: string;
   };
+  addProductInCart: (id: number, count: number) => void;
 };
 
-const Items = ({ itemsArray, stateCurrency }: Props) => {
+const Items = ({ itemsArray, stateCurrency, addProductInCart }: Props) => {
   return (
     <div className="main">
       {itemsArray.map(
@@ -23,6 +24,7 @@ const Items = ({ itemsArray, stateCurrency }: Props) => {
             currency={currency}
             price={price}
             stateCurrency={stateCurrency}
+            addProductInCart={addProductInCart}
           />
         )
       )}

@@ -10,10 +10,19 @@ type Props = {
     convert: number;
     currency: string;
   };
+  addProductInCart: (id: number, count: number) => void;
 };
 
-const Item = ({ title, description, price, stateCurrency }: Props) => {
-  let updatePrice = Math.floor(price / stateCurrency.convert);
+const Item = ({
+  id,
+  title,
+  description,
+  price,
+  stateCurrency,
+  addProductInCart,
+}: Props) => {
+  let updatePrice = +Math.floor(price / stateCurrency.convert);
+
   return (
     <div className="wrap">
       <div className="title">{title}</div>
@@ -21,7 +30,7 @@ const Item = ({ title, description, price, stateCurrency }: Props) => {
       <div className="currency">
         {stateCurrency.currency} <span className="price">{updatePrice}</span>
       </div>
-      <button>Buy</button>
+      <button onClick={() => addProductInCart(id, price)}>Buy</button>
     </div>
   );
 };
