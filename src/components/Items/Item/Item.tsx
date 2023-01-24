@@ -1,5 +1,3 @@
-import { useState } from "react";
-import ButtonCurrency from "../../ButtonCurrency/ButtonCurrency";
 import "./Item.scss";
 
 type Props = {
