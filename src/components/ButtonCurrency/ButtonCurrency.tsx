@@ -1,12 +1,22 @@
-type Props = {};
+type Props = {
+  changeCurrUAN: () => void;
+  changeCurrEUR: () => void;
+  changeCurrUSD: () => void;
+  changeCurrPLN: () => void;
+};
 
-const ButtonCurrency = (props: Props) => {
+const ButtonCurrency = ({
+  changeCurrUAN,
+  changeCurrEUR,
+  changeCurrUSD,
+  changeCurrPLN,
+}: Props) => {
   return (
     <div>
-      <button>UAN</button>
-      <button>EUR</button>
-      <button>USD</button>
-      <button>PLN</button>
+      <button onClick={changeCurrUAN}>UAN</button>
+      <button onClick={changeCurrEUR}>EUR</button>
+      <button onClick={changeCurrUSD}>USD</button>
+      <button onClick={changeCurrPLN}>PLN</button>
     </div>
   );
 };

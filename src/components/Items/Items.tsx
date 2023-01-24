@@ -1,12 +1,16 @@
 import Item from "./Item/Item";
 import "./Items.scss";
-import { getItemsObject, itemsArrayProps } from "../../State/itemsArray";
+import { itemsArrayProps } from "../../State/itemsArray";
 
 type Props = {
   itemsArray: any[];
+  stateCurrency: {
+    convert: number;
+    currency: string;
+  };
 };
 
-const Items = ({ itemsArray }: Props) => {
+const Items = ({ itemsArray, stateCurrency }: Props) => {
   return (
     <div className="main">
       {itemsArray.map(
@@ -18,6 +22,7 @@ const Items = ({ itemsArray }: Props) => {
             description={description}
             currency={currency}
             price={price}
+            stateCurrency={stateCurrency}
           />
         )
       )}
