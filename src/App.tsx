@@ -5,7 +5,10 @@ import "./App.scss";
 import itemsArray from "./State/itemsArray";
 import { useState } from "react";
 
-type StateCurrency = any;
+type StateCurrency = {
+  convert: number;
+  currency: string;
+};
 type ProductsInCart = {
   [id: number]: number;
 };
